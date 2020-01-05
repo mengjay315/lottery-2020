@@ -7,22 +7,32 @@ import (
 )
 
 const (
-	host    string = "localhost"
-	port    string = "5432"
-	user    string = "postgres"
-	pass    string = "zchainbtc" // 密码？// 123456!(server)
-	dbname  string = "lottery_db"
+	host   string = "localhost"
+	port   string = "5432"
+	user   string = "postgres"
+	pass   string = "zchainbtc" // 密码？// 123456!(server)
+	dbname string = "lottery_db"
 )
 
-func InitDB() (db *sql.DB) {
+var DB *sql.DB
+
+//func InitDB() (db *sql.DB) {
+//	db, err := zcpg.Connect(host, port, user, pass, dbname)
+//	if err != nil {
+//		log.Fatalf("connect postgresql error %v", err)
+//	}
+//
+//	db.Ping()
+//	return db
+//}
+
+func init() {
 	db, err := zcpg.Connect(host, port, user, pass, dbname)
 	if err != nil {
 		log.Fatalf("connect postgresql error %v", err)
 	}
 
 	db.Ping()
-	return db
+
+	DB = db
 }
-
-
-

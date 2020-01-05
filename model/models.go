@@ -3,26 +3,25 @@ package model
 import (
 	"github.com/mengjay315/lottery/db/dbtypes"
 	"github.com/mengjay315/lottery/db/zcpg"
-	"github.com/mengjay315/lottery/db/zcpg/database"
+	db "github.com/mengjay315/lottery/db/zcpg/database"
 	"log"
 )
 
 func CreateTable() error {
-	db := database.InitDB()
-	err := zcpg.CreateTables(db)
+	//db := database.InitDB()
+	err := zcpg.CreateTables(db.DB)
 	if err != nil {
 		log.Fatalf("create postgresql table error %v", err)
 	}
 
 	// 给表 vid赋值 0
 
-
 	return err
 }
 
 func GetPerson(name string) (person dbtypes.PersonBasic, err error) {
-	db := database.InitDB()
-	person, err = zcpg.QueryPerson(db, name)
+	//db := database.InitDB()
+	person, err = zcpg.QueryPerson(db.DB, name)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -31,8 +30,8 @@ func GetPerson(name string) (person dbtypes.PersonBasic, err error) {
 }
 
 func GetProgram(depart string) (program dbtypes.ProgramBasic, err error) {
-	db := database.InitDB()
-	program, err = zcpg.QueryProgram(db, depart)
+	//db := database.InitDB()
+	program, err = zcpg.QueryProgram(db.DB, depart)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -41,8 +40,8 @@ func GetProgram(depart string) (program dbtypes.ProgramBasic, err error) {
 }
 
 func GetVoteNums() (res []*dbtypes.ProgramBasic, err error) {
-	db := database.InitDB()
-	res, err = zcpg.QueryVoteRes(db)
+	//db := database.InitDB()
+	res, err = zcpg.QueryVoteRes(db.DB)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -51,8 +50,8 @@ func GetVoteNums() (res []*dbtypes.ProgramBasic, err error) {
 }
 
 func GetAllPerson() (persons []*dbtypes.PersonBasic, err error) {
-	db := database.InitDB()
-	persons, err = zcpg.QueryAllPersons(db)
+	//db := database.InitDB()
+	persons, err = zcpg.QueryAllPersons(db.DB)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -61,8 +60,8 @@ func GetAllPerson() (persons []*dbtypes.PersonBasic, err error) {
 }
 
 func GetSignRes() (res []*dbtypes.PersonBasic, err error) {
-	db := database.InitDB()
-	res, err = zcpg.QuerySignInRes(db)
+	//db := database.InitDB()
+	res, err = zcpg.QuerySignInRes(db.DB)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -71,8 +70,8 @@ func GetSignRes() (res []*dbtypes.PersonBasic, err error) {
 }
 
 func GetVid() (res dbtypes.VoteId, err error) {
-	db := database.InitDB()
-	res, err = zcpg.QueryVid(db)
+	//db := database.InitDB()
+	res, err = zcpg.QueryVid(db.DB)
 	if err != nil {
 		log.Fatal(err)
 	}

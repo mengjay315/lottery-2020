@@ -29,6 +29,5 @@ const (
 		FROM personnels;`
 
 	SelectPersonResLimit = `SELECT name, memo, time, able
-		FROM personnels ORDER BY time DESC LIMIT 10;`
+		FROM personnels ORDER BY time DESC LIMIT 3;`
 )
-
