@@ -4,7 +4,7 @@ const (
 	CreatePersonTable = `CREATE TABLE IF NOT EXISTS personnels (
         id SERIAL PRIMARY KEY,
         name VARCHAR(12),
-        memo VARCHAR(32),
+        memo VARCHAR(64),
 		time  INT8,
 		able  INT4
     );`

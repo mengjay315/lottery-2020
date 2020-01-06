@@ -32,33 +32,49 @@ func SignIn(c *gin.Context) {
 		Number: 0,
 	}
 
-	_, err := zcpg.InsertPerson(db.DB, person)
-	if err != nil {
-		log.Fatalf("insert person error %v", err)
-	}
+	// 先判断是否签过，看persons 表中是否有这个人，
+	// 有的话，直接返回错误信息，已签到
 
-	//先查询有没有这个部门，有的话就不用存了
-	queryProg, err := model.GetProgram(depart)
+	personRes, err := model.GetPerson(name)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if queryProg.Depart == "" {
-		_, err = zcpg.InsertProgram(db.DB, program)
+	if personRes.Name == "" {
+		_, err := zcpg.InsertPerson(db.DB, person)
 		if err != nil {
-			log.Fatalf("insert program error %v", err)
+			log.Fatalf("insert person error %v", err)
 		}
 
-		c.JSON(http.StatusOK, gin.H{
-			"code":    200,
-			"memo":    memo,
-			"message": "Sign_in successfully!",
-		})
+		//先查询有没有这个部门，有的话就不用存了
+		queryProg, err := model.GetProgram(depart)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		if queryProg.Depart == "" {
+			_, err = zcpg.InsertProgram(db.DB, program)
+			if err != nil {
+				log.Fatalf("insert program error %v", err)
+			}
+
+			c.JSON(http.StatusOK, gin.H{
+				"code":    200,
+				"memo":    memo,
+				"message": "Sign_in successfully!",
+			})
+		} else {
+			c.JSON(http.StatusOK, gin.H{
+				"code":    200,
+				"memo":    memo,
+				"message": "Sign_in successfully!",
+			})
+		}
 	} else {
 		c.JSON(http.StatusOK, gin.H{
 			"code":    200,
 			"memo":    memo,
-			"message": "Sign_in successfully!",
+			"message": "You have already signIn, return your memo",
 		})
 	}
 }

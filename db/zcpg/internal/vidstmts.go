@@ -17,9 +17,7 @@ const (
 		FROM vids;`
 
 	// update
-	updateVidRow = `UPDATE vids SET vid = $1`
+	updateVidRow = `UPDATE vids SET vid = $1 WHERE id = 1`
 
 	UpdateVidRow = updateVidRow + `RETURNING id;`
-
 )
-

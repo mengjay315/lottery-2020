@@ -14,7 +14,5 @@ func main() {
 	}
 
 	router := routers.InitRouter()
-	router.Run("172.168.0.191:8087")
+	router.Run("192.168.60.251:8087")
 }
-
-
