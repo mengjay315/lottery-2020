@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b223c583-2ad6-4a4c-aa85-860e2b984c4d" name="Default Changelist" comment="" />
+    <list default="true" id="b223c583-2ad6-4a4c-aa85-860e2b984c4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/lianhe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/lianhe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/zcpg/internal/personstmts.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/zcpg/internal/personstmts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/zcpg/internal/programstmts.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/zcpg/internal/programstmts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +22,21 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="XtgWlKSb" />
   </component>
   <component name="ProjectId" id="1VomIfOcqEzr4cyNvrSUPKBK5E3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,12 +44,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,17 +68,33 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update postgresql db" />
+    <option name="LAST_COMMIT_MESSAGE" value="update postgresql db" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <exec-path>$USER_HOME$/gopath/bin/vgo</exec-path>
     <proxy>https://goproxy.io</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="544" y="165" key="SettingsEditor" timestamp="1578032933008">
-      <screen x="0" y="23" width="1884" height="1057" />
+    <state x="747" y="314" key="#com.intellij.tools.ToolEditorDialog" timestamp="1578209460501">
+      <screen x="0" y="23" width="1880" height="1057" />
     </state>
-    <state x="543" y="165" key="SettingsEditor/0.23.1880.1057@0.23.1880.1057" timestamp="1577927784944" />
+    <state x="747" y="314" key="#com.intellij.tools.ToolEditorDialog/0.23.1880.1057@0.23.1880.1057" timestamp="1578209460501" />
+    <state x="742" y="139" key="CommitChangelistDialog2" timestamp="1578201704636">
+      <screen x="0" y="23" width="1880" height="1057" />
+    </state>
+    <state x="742" y="139" key="CommitChangelistDialog2/0.23.1880.1057@0.23.1880.1057" timestamp="1578201704636" />
+    <state x="543" y="165" key="SettingsEditor" timestamp="1578209498625">
+      <screen x="0" y="23" width="1880" height="1057" />
+    </state>
+    <state x="543" y="165" key="SettingsEditor/0.23.1880.1057@0.23.1880.1057" timestamp="1578209498625" />
     <state x="544" y="165" key="SettingsEditor/0.23.1884.1057@0.23.1884.1057" timestamp="1578032933008" />
+    <state x="638" y="276" key="Vcs.Push.Dialog.v2" timestamp="1578201717509">
+      <screen x="0" y="23" width="1880" height="1057" />
+    </state>
+    <state x="638" y="276" key="Vcs.Push.Dialog.v2/0.23.1880.1057@0.23.1880.1057" timestamp="1578201717509" />
     <state width="1081" height="407" key="javadoc.popup.new" timestamp="1578134178025">
       <screen x="0" y="23" width="1885" height="1057" />
     </state>

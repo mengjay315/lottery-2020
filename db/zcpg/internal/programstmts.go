@@ -3,9 +3,12 @@ package internal
 const (
 	CreateProgramTable = `CREATE TABLE IF NOT EXISTS programs (
         id SERIAL PRIMARY KEY,
-        depart  CHAR(32),
-		number  INT4
+        depart  VARCHAR(21),
+		number  INT2
     );`
+
+	//depart  VARCHAR(21),
+	//number  INT2
 
 	// insert
 	insertProgramRow = `INSERT INTO programs (
@@ -14,8 +17,7 @@ const (
 
 	InsertProgramRow = insertProgramRow + `RETURNING id;`
 
-
-    // update
+	// update
 	updateProgramRow = `UPDATE programs SET number = $1 
         WHERE depart = $2`
 

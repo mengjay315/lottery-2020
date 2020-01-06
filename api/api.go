@@ -147,7 +147,7 @@ func Vote(c *gin.Context) {
 }
 
 func GetVoteRes(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "*")
+	//c.Header("Access-Control-Allow-Origin", "*")
 	voteRes, err := model.GetVoteNums()
 	if err != nil {
 		log.Fatal(err)

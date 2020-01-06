@@ -3,11 +3,15 @@ package internal
 const (
 	CreatePersonTable = `CREATE TABLE IF NOT EXISTS personnels (
         id SERIAL PRIMARY KEY,
-        name CHAR(32),
-        memo CHAR(32),
+        name VARCHAR(12),
+        memo VARCHAR(32),
 		time  INT8,
 		able  INT4
     );`
+
+	//name VARCHAR(12),
+	//able  INT2
+	//memo VARCHAR(16),
 
 	// insert
 	insertPersonRow = `INSERT INTO personnels (

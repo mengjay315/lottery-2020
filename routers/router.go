@@ -10,7 +10,7 @@ func InitRouter() *gin.Engine {
 
 	r.POST("/sign_in", api.SignIn) // 签到
 
-	r.POST("/vote_id", api.SetVoteID) // 获取投票信号
+	r.POST("/vote_id", api.SetVoteID) // 设置投票信号
 	r.POST("/vote", api.Vote)         // 投票
 
 	// 查询
